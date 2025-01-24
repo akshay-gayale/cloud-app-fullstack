@@ -38,6 +38,6 @@ steps:
   inputs:
     action: 'deploy'
     connectionType: 'kubernetesServiceConnection'
-    kubernetesServiceConnection: 'ak-aks-01-default'
+    kubernetesServiceConnection: 'test-aks'
     namespace: 'default'
     manifests: '$(Build.SourcesDirectory)/deployment.yaml'
