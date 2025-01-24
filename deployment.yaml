@@ -5,7 +5,7 @@ metadata:
     app: greet-service
   name: greet-service
   namespace: default
-  
+
 spec:
   progressDeadlineSeconds: 600
   replicas: 3
@@ -20,16 +20,16 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-       labels:
+      labels:
         app: greet-service
     spec:
       containers:
-      - image: akshaygayale
-        imagePullPolicy: IfNotPresent
-        name: greet-service
-       
+        - image: sbtalk71/greet-service:1.0
+          imagePullPolicy: IfNotPresent
+          name: greet-service
+
       restartPolicy: Always
-      
+
 ---
 apiVersion: v1
 kind: Service
@@ -38,8 +38,9 @@ metadata:
     app: greet-service
   name: greet-service
   namespace: default
-  
+
 spec:
+
   ports:
     - port: 8080
       protocol: TCP
