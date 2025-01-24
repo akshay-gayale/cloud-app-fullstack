@@ -24,7 +24,7 @@ spec:
         app: greet-service
     spec:
       containers:
-      - image: akshaygayale/greet-service:1.0
+      - image: akshaygayale
         imagePullPolicy: IfNotPresent
         name: greet-service
        
